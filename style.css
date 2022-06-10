@@ -164,6 +164,17 @@ body {
     
 }
 
+.Search-Button,
+.Voice-Search-Button,
+.Upload-Box,
+.Apps-Box,
+.Notifications-Box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
 .Search-Button {
     height: 40px;
     width: 66px;
@@ -173,11 +184,49 @@ body {
     border-color: rgb(192,192,192);
     margin-left: -1px;
     margin-right: 10px;
+
+    
+    
+}
+
+.Search-Button .Search-Tooltip, 
+.Voice-Search-Button .Voice-Tooltip,
+.Upload-Box .Upload-Tooltip,
+.Apps-Box .Tooltip,
+.Notifications-Box .Notifications-Tooltip {
+    font-size: 1;
+    font-family: Roboto;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    border-radius: 2px;
+
+    bottom: -40px;
+    opacity: 0;
+    pointer-events: None;
+    white-space: nowrap;
+}
+
+.Search-Button:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.Search-Button:hover .Search-Tooltip,
+.Voice-Search-Button:hover .Voice-Tooltip,
+.Upload-Box:hover .Upload-Tooltip,
+.Apps-Box:hover:hover .Tooltip,
+.Notifications-Box:hover .Notifications-Tooltip {
+    opacity: 0.9;
+    transition: opacity 0.15s;
 }
 
 .Search-Icon {
     height: 25px;
-    margin-top: 4px;
 }
 
 .Voice-Search-Button {
@@ -186,11 +235,12 @@ body {
     border-radius: 20px;
     border: none;
     background-color: rgb(245, 245, 245);
+    
 }
+
 
 .Voice-Icon {
     height: 24px;
-    margin-top: 4px;
 }
 
 .Upload-Icon {
